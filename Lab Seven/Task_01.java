@@ -1,29 +1,30 @@
-class Animal {
-  void sound() {
-    System.out.println("Animal makes Generic Sound");
-  }
-} 
-class Dog extends Animal {
-  @Override 
-  void sound() {
-    System.out.println("Dog barks");
-  }
-}
-class Cat extends Animal {
-  @Override
-  void sound() {
-    System.out.println("Cat meows"); 
+public class Calculator {
+  // Method for adding 2 integers
+  int add(int a, int b) { 
+    return a + b;                  
+ } 
+// Method for adding 2 double numbers 
+  double add(double a, double b) { 
+    return a + b;
+  // Method for adding 3 integers
+    int add(int a, int b, int c) { 
+      return a + b + c;
+    }
+    public static void main(String[] args) {
+      // Creating Object
+      Calculator calc = new Calculator();
+      // Calling Methods 
+      System.out.println( 
+        "Sum of two integers   : "
+        + calc.add(10, 20)
+      ); 
+      System.out.println(
+        "Sum of two doubles    : "
+        + calc.add(5.5, 4.5)
+      );
+      System.out.println(
+        "Sum of three integers : "
+        + calc.add(10, 20, 30) 
+      );
+    }
   } 
-}
-public class Leo { 
-  public static void main(String[] args) { 
-    Animal myAnimal = new Animal();
-    Animal myDog = new Dog();
-    Animal myCat = new Cat();
-
-    
-    myAnimal.sound();
-    myDog.sound();
-    myCat.sound();
-  }
-} 
